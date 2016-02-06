@@ -1,0 +1,33 @@
+#!/bin/bash
+
+cyrus_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+bootstrap_dir=~/railstrap
+targetdir=~/railsapps/cyrus
+template_opt="-m ${cyrus_dir}/template.rb"
+railsopts="--skip-bundle -d mysql ${template_opt}"
+
+echo ${DIR}
+
+clean() {
+  echo "Cleaning"
+  rm -rf ${targetdir}
+}
+
+build() {
+  echo "Building"
+  cd ${bootstrap_dir}
+  bundle exec rails new ${targetdir} ${railsopts}
+}
+
+case $1 in
+  build)
+    build
+    ;;
+  clean)
+    clean
+    ;;
+  *)
+    clean
+    build
+    ;;
+esac
