@@ -1,5 +1,32 @@
 gem_group :development do
+  gem 'annotate'
+  gem 'pry-rails'
   gem 'foreman'
+  gem 'rack-mini-profiler'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
+
+  # Capistrano
+  gem 'capistrano-rails'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano-passenger'
+end
+
+gem_group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'codeclimate-test-reporter'
+  gem 'timecop'
+  gem 'rspec-rails'
+  gem 'rspec-activejob'
+  gem 'faker'
+end
+
+gem_group :development, :test do
+  gem 'byebug'
 end
 
 # UI
@@ -13,6 +40,8 @@ gem 'autoprefixer-rails'
 # Stores
 gem 'dalli'
 gem 'oj'
+gem 'hiredis'
+gem 'redis', require: ['redis', 'redis/connection/hiredis']
 
 # Configuration
 gem 'dotenv-rails'
@@ -20,6 +49,16 @@ gem 'dotenv-rails'
 # Middleware
 gem 'warden'
 gem 'geokit-rails', require: false
+
+# Helpers
+gem 'browser'
+gem 'will_paginate'
+gem 'connection_pool'
+
+# Mini-frameworks
+gem 'paperclip'
+gem 'sidekiq'
+gem 'sidekiq-failures'
 
 # Oauth
 gem 'omniauth-facebook'
