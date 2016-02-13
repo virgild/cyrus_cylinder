@@ -80,8 +80,9 @@ end
 
 #
 bower_dependencies = {
-  "normalize.css" => "",
-  "bootstrap-sass-official" => ""
+  'normalize.css' => '',
+  'bootstrap-sass-official' => '',
+  'redux': 'https://cdnjs.cloudflare.com/ajax/libs/redux/3.3.1/redux.js'
 }
 
 #
