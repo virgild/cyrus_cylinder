@@ -52,13 +52,16 @@ gem 'geokit-rails', require: false
 
 # Helpers
 gem 'browser'
-gem 'will_paginate'
+gem 'kaminari'
 gem 'connection_pool'
 
 # Mini-frameworks
 gem 'paperclip'
 gem 'sidekiq'
 gem 'sidekiq-failures'
+
+# Clients
+gem 'faraday'
 
 # Oauth
 gem 'omniauth-facebook'
