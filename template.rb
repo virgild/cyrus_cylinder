@@ -34,7 +34,6 @@ gem 'haml-rails'
 gem 'sass-rails'
 
 # Sprockets
-gem 'react-rails'
 gem 'autoprefixer-rails'
 
 # Stores
@@ -82,60 +81,8 @@ rescue
 end
 
 #
-bower_dependencies = {
-  'normalize.css' => '',
-  'bootstrap-sass-official' => '',
-  'redux': 'https://cdnjs.cloudflare.com/ajax/libs/redux/3.3.1/redux.js'
-}
-
-#
 environment 'config.file_watcher = ActiveSupport::EventedFileUpdateChecker', env: 'development'
-
-environment 'config.react.variant = :development', env: 'development'
-
-environment 'config.react.variant = :production', env: 'production'
-
-initializer 'react.rb', <<-CODE
-#{app_const}.configure do
-  config.react.addons = true
-end
-CODE
 
 initializer 'warden.rb', <<-CODE
 #
 CODE
-
-file 'bower.json', <<-CODE
-{
-  "name": "#{app_name}",
-  "version": "1.0.0",
-  "authors": [
-    "#{name} <#{email}>"
-  ],
-  "moduleType": [
-    "node"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    #{bower_dependencies.map { |k, v| "\"#{k}\": \"#{v}\"" }.join(",\n    ")}
-  }
-}
-CODE
-
-file '.bowerrc', <<-CODE
-{
-  "directory": "vendor/assets/components",
-  "analytics": false
-}
-CODE
-
-#
-run 'bower install'
