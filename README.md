@@ -13,7 +13,6 @@ Things added
 * [pry-rails](https://github.com/rweng/pry-rails) - Use Pry as your rails console
 * [foreman](http://github.com/ddollar/foreman) - Process manager for applications with multiple components
 * [rack-mini-profiler](http://miniprofiler.com) - Profiling toolkit for Rack applications with Rails integration
-* [quiet_assets](http://github.com/evrone/quiet_assets) - Quiet Assets turns off Rails asset pipeline log
 * [better_errors](https://github.com/charliesome/better_errors) - Provides a better error page for Rails and other Rack apps
 * [binding_of_caller](http://github.com/banister/binding_of_caller) - Retrieve the binding of a method's caller
 * [awesome_print](http://github.com/michaeldv/awesome_print) - Great Ruby dubugging companion: pretty print Ruby objects to visualize their structure
@@ -39,7 +38,6 @@ Things added
 * [redis](https://github.com/redis/redis-rb) - A Ruby client that tries to match Redis' API one-to-one, while still     providing an idiomatic interface
 * [dotenv-rails](https://github.com/bkeepers/dotenv) - Autoload dotenv in Rails
 * [warden](http://github.com/hassox/warden) - Rack middleware that provides authentication for rack applications
-* [geokit-rails](http://github.com/geokit/geokit-rails) - Official Geokit plugin for Rails/ActiveRecord
 * [browser](http://github.com/fnando/browser) - Do some browser detection with Ruby
 * [kaminari](https://github.com/amatsuda/kaminari) - Kaminari is a Scope &amp; Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+
 * [connection_pool](https://github.com/mperham/connection_pool) - Generic connection pool for Ruby
@@ -50,21 +48,8 @@ Things added
 * [omniauth-facebook](https://github.com/mkdynamic/omniauth-facebook) - Facebook OAuth2 Strategy for OmniAuth
 * [omniauth-twitter](https://github.com/arunagw/omniauth-twitter) - OmniAuth strategy for Twitter
 * [omniauth-google-oauth2](https://github.com/zquestz/omniauth-google-oauth2) - A Google OAuth2 strategy for OmniAuth 1
-* [aws-sdk-v1](http://aws.amazon.com/sdkforruby) - Version 1 of the AWS SDK for Ruby
 * [whenever]() - Clean ruby syntax for writing and deploying cron jobs
-
-### bower.json and config file (.bowerrc)
-
-#### Added dependencies
-* normalize.css
-* bootstrap-sass-official
-* redux
-
-### Environment settings
-
-* react-rails settings
 
 ### Initializers
 
-* react-rails initializer
 * warden initializer
